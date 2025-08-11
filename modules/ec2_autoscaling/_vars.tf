@@ -24,11 +24,11 @@ variable "key_name" {
   description = "Name of the key pair to use for SSH access"
 }
 
-variable "user_data" {
-  type        = string
-  description = "Base64-encoded user data script to configure EC2 instances"
-  default     = ""
-}
+# variable "user_data" {
+#   type        = string
+#   description = "Base64-encoded user data script to configure EC2 instances"
+#   default     = ""
+# }
 
 variable "security_group_ids" {
   type        = list(string)
@@ -56,6 +56,12 @@ variable "max_size" {
   type        = number
   description = "Maximum number of EC2 instances in the Auto Scaling Group"
   default     = 2
+}
+
+variable "target_group_arns" {
+  type        = list(string)
+  description = "List of target group ARNs to attach the Auto Scaling Group to"
+  default     = []
 }
 
 variable "default_tags" {

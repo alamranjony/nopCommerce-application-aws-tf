@@ -16,4 +16,6 @@ module "ec2_autoscaling" {
   min_size           = 1
   max_size           = 2
   default_tags       = local.default_tags
+
+  target_group_arns = [module.alb.target_group_arn]
 }

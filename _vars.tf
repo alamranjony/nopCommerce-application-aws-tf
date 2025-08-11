@@ -7,7 +7,7 @@ locals {
 
   env_code_branches = {
     "dev"  = "develop",
-    "stg"  = "stage",
+    "uat"  = "stage",
     "prod" = "main"
   }
 
