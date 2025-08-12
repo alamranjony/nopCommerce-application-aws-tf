@@ -14,7 +14,7 @@ terraform {
 
 provider "aws" {
   profile = "lab-test"
-  region  = "ap-southeast-1"
+  region  = "ap-southeast-2"
   default_tags {
     tags = local.default_tags
   }

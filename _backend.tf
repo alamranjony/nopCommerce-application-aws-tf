@@ -12,9 +12,9 @@
 
 terraform {
   backend "s3" {
-    bucket       = "nop-tfstate"
-    key          = "drinkspot/terraform.tfstate"
-    region       = "ap-southeast-1"
+    bucket       = "drinkspot-tfstate"
+    key          = "terraform.tfstate"
+    region       = "ap-southeast-2"
     encrypt      = true
     use_lockfile = true #S3 native locking
   }
